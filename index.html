@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashish Gunjal — Cloud & DevOps Engineer</title>
+  <meta name="description" content="Portfolio website of Ashish Gunjal — Cloud & DevOps Engineer specializing in AWS, Terraform, SRE, Zabbix/Grafana Monitoring, and Enterprise Backup & DR." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0f15; --card: #111827; --muted: #94a3b8; --text: #e5e7eb; --accent: #22c55e; --line:#1f2937;
+      --chip:#0f172a; --chip-text:#cbd5e1;
+    }
+    [data-theme="light"]{
+      --bg:#f7f8fb; --card:#ffffff; --muted:#475569; --text:#0f172a; --accent:#0ea5e9; --line:#e2e8f0;
+      --chip:#f1f5f9; --chip-text:#0f172a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text);}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in oklab, var(--bg), transparent 30%); border-bottom:1px solid var(--line); z-index:20}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .nav a.logo{font-weight:800; letter-spacing:0.3px}
+    .nav-links{display:flex; gap:18px; flex-wrap:wrap}
+    .nav-links a{font-weight:600; opacity:.9}
+    .btn{display:inline-flex; gap:8px; align-items:center; padding:10px 14px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(180deg, color-mix(in oklab, var(--card), transparent 40%), var(--card));}
+    .btn:hover{transform:translateY(-1px)}
+
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; padding-top:28px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:22px}
+    .tag{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:var(--chip); color:var(--chip-text); font-size:12px; border:1px solid var(--line)}
+    h1{font-size:38px; line-height:1.15; margin:.25rem 0 0}
+    p.lead{color:var(--muted); font-size:16px; margin:10px 0 0}
+    .hero-cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+
+    section{margin-top:28px}
+    h2{font-size:20px; margin:0 0 12px}
+    .grid{display:grid; gap:16px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+
+    .timeline{display:grid; gap:16px}
+    .item{border:1px solid var(--line); background:var(--card); border-radius:16px; padding:16px}
+    .item h3{margin:0 0 4px; font-size:16px}
+    .item .meta{font-size:13px; color:var(--muted)}
+    .bullets{margin:10px 0 0; padding-left:18px}
+    .bullets li{margin:6px 0}
+
+    .skill-cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px}
+    .skill{padding:14px; border:1px solid var(--line); border-radius:14px; background:var(--card)}
+    .skill h4{margin:0 0 6px; font-size:14px}
+    .skill .pill{display:inline-block; margin:6px 6px 0 0; padding:6px 10px; border-radius:999px; background:var(--chip); color:var(--chip-text); font-size:12px; border:1px solid var(--line)}
+
+    .project{display:grid; gap:10px; border:1px solid var(--line); border-radius:16px; padding:16px; background:var(--card)}
+    .project h3{margin:0}
+    .project .meta{font-size:13px; color:var(--muted)}
+
+    footer{margin:28px 0 40px; padding:16px; border-top:1px solid var(--line); color:var(--muted); text-align:center}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#">Ashish Gunjal</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+        <button id="theme" class="btn" title="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <span class="tag">Cloud & DevOps Engineer • AWS • SRE • Monitoring</span>
+        <h1>Hi, I’m Ashish — I build reliable, observable, and secure cloud platforms.</h1>
+        <p class="lead">7+ years across Cloud Infrastructure, SRE, Automation, and Enterprise Backup & DR. I focus on AWS, Terraform, Zabbix/Grafana monitoring, and robust data protection to keep systems fast, compliant, and cost‑efficient.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">📩 Contact me</a>
+          <a class="btn" href="#projects">🔧 View projects</a>
+          <a class="btn" href="./Ashish_CV.pdf" download>⬇️ Download CV</a>
+        </div>
+        <div class="chips">
+          <span class="tag">AWS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Zabbix</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">SRE Practices</span>
+          <span class="tag">Veeam</span>
+          <span class="tag">Commvault</span>
+          <span class="tag">IBM Spectrum Protect</span>
+          <span class="tag">Veritas</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Quick facts</h2>
+        <ul class="bullets">
+          <li>Location: Pune, India</li>
+          <li>Current Role: Cloud & DevOps Engineer at i-Source Infosystems (Sep 2022 – Present)</li>
+          <li>Prev: Senior Backup Admin @ Alchemy Techsol • TSM Admin @ Softenger</li>
+          <li>Education: B.E. (E&TC), Dr. D. Y. Patil Institute of Engineering & Technology</li>
+          <li>Contact: <a href="mailto:ashishgp7@gmail.com">ashishgp7@gmail.com</a> • <a href="tel:+919209257353">+91 9209257353</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/ashish-gunjal-a434bb249" target="_blank" rel="noopener">/ashish-gunjal-a434bb249</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="grid cols-2">
+      <div class="card">
+        <h2>About</h2>
+        <p class="lead">I design and run resilient platforms on AWS with strong observability and airtight backup/DR. I enjoy simplifying complex infra, automating toil, and documenting clear runbooks so teams ship faster with fewer incidents.</p>
+      </div>
+      <div class="card">
+        <h2>What I’m great at</h2>
+        <ul class="bullets">
+          <li>Cloud architecture on AWS with cost‑aware, HA designs</li>
+          <li>Infrastructure as Code with Terraform</li>
+          <li>Monitoring & alerting with Zabbix + Grafana</li>
+          <li>SRE practices: SLIs/SLOs, incident response, postmortems</li>
+          <li>Enterprise backup & DR across mixed environments</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="skill-cards">
+        <div class="skill">
+          <h4>Cloud & DevOps</h4>
+          <span class="pill">AWS</span>
+          <span class="pill">Terraform</span>
+          <span class="pill">Linux</span>
+          <span class="pill">Windows</span>
+          <span class="pill">IBM AIX</span>
+        </div>
+        <div class="skill">
+          <h4>Monitoring & SRE</h4>
+          <span class="pill">Zabbix</span>
+          <span class="pill">Grafana</span>
+          <span class="pill">Runbooks</span>
+          <span class="pill">Incident Response</span>
+          <span class="pill">RCAs</span>
+        </div>
+        <div class="skill">
+          <h4>Backup & DR</h4>
+          <span class="pill">Veeam B&R</span>
+          <span class="pill">Commvault</span>
+          <span class="pill">IBM Spectrum Protect (TSM)</span>
+          <span class="pill">Veritas BackupExec</span>
+          <span class="pill">Altaro • Vembu</span>
+        </div>
+        <div class="skill">
+          <h4>Scripting & Data</h4>
+          <span class="pill">Shell scripting</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MS‑SQL</span>
+          <span class="pill">Git</span>
+          <span class="pill">BMC Remedy • ManageEngine • SMARTONE</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>Cloud & DevOps Engineer — i‑Source Infosystems</h3>
+          <div class="meta">Sep 2022 – Present • Pune, India</div>
+          <ul class="bullets">
+            <li>Designed and implemented AWS infrastructure with HA, security best practices, and cost controls.</li>
+            <li>Provisioned infrastructure using Terraform and automated routine ops to reduce manual effort.</li>
+            <li>Built monitoring and alerting with Zabbix and Grafana; defined SLOs, improved MTTR.</li>
+            <li>Hardened environments and aligned with compliance requirements for data protection.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Senior Backup Administrator — Alchemy Techsol</h3>
+          <div class="meta">Jul 2021 – Sep 2022 • Pune, India</div>
+          <ul class="bullets">
+            <li>Operated enterprise backup solutions (Veeam, Commvault, IBM TSM, Altaro) across hybrid estates.</li>
+            <li>Automated backup monitoring and improved job success rates; defined DR test cadence.</li>
+            <li>Delivered L2/L3 support, RCAs, and optimized retention to balance RTO/RPO and cost.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>TSM Administrator — Softenger (Vodafone Idea Project)</h3>
+          <div class="meta">Nov 2017 – Jul 2021 • Pune, India</div>
+          <ul class="bullets">
+            <li>Administered IBM Spectrum Protect (TSM) at scale; implemented LAN‑free backups (Windows/AIX/Linux).</li>
+            <li>Reduced failures with better scheduling, media management, and operational runbooks.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Highlighted Projects</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>Zabbix & Grafana HA on 2‑node cluster</h3>
+          <div class="meta">Pacemaker • Corosync • Galera DB • VIP failover</div>
+          <p>Implemented production‑grade HA for both Zabbix and Grafana using a 2‑node setup with Galera for database replication and VIP for failover. Delivered zero‑data‑loss objectives and clear runbooks.</p>
+        </article>
+        <article class="project">
+          <h3>AWS Site‑to‑Site VPN with FortiGate</h3>
+          <div class="meta">AWS VPC • FortiGate FGT80F • Monitoring over VPN</div>
+          <p>Established IPsec connectivity between AWS and an on‑prem DC (TierPoint Dallas) enabling secure Zabbix monitoring of EC2 instances via private subnets.</p>
+        </article>
+        <article class="project">
+          <h3>PostgreSQL & Zabbix Upgrade Planning</h3>
+          <div class="meta">Ubuntu 20.04 • PostgreSQL 12→14+ • Change management</div>
+          <p>Prepared an end‑to‑end upgrade plan for Zabbix (5.4.5→7.x) including DB migration to PostgreSQL 14+, template cleanup, and agent rollout strategy with minimal downtime.</p>
+        </article>
+        <article class="project">
+          <h3>Backup Monitoring Automation</h3>
+          <div class="meta">Veeam • Commvault • Reporting</div>
+          <p>Automated health checks and daily summaries for backup jobs, cutting manual review time and increasing reliability across environments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="certs">
+      <h2>Certifications</h2>
+      <div class="grid">
+        <div class="item">
+          <strong>AWS Certified Solutions Architect – Associate</strong> <span class="meta">(in progress)</span>
+        </div>
+        <div class="item">
+          <strong>Terraform Associate</strong> <span class="meta">(in progress)</span>
+        </div>
+        <div class="item">
+          <strong>ITIL Foundation</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p>Email: <a href="mailto:ashishgp7@gmail.com">ashishgp7@gmail.com</a></p>
+          <p>Phone: <a href="tel:+919209257353">+91 9209257353</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/ashish-gunjal-a434bb249" target="_blank" rel="noopener">linkedin.com/in/ashish-gunjal-a434bb249</a></p>
+        </div>
+        <div class="card">
+          <form onsubmit="event.preventDefault(); alert('Thanks! I\'ll get back to you soon.');">
+            <div class="grid" style="grid-template-columns:1fr 1fr; gap:10px;">
+              <input required placeholder="Your name" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);">
+              <input type="email" required placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);">
+            </div>
+            <textarea required placeholder="Message" rows="4" style="margin-top:10px;width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);"></textarea>
+            <button class="btn" type="submit" style="margin-top:10px">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Ashish Gunjal • Built with clean HTML/CSS/JS • <a href="#">Back to top ↑</a>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const btn = document.getElementById('theme');
+    const saved = localStorage.getItem('theme');
+    if(saved){ document.documentElement.setAttribute('data-theme', saved); }
+    btn.addEventListener('click', () => {
+      const curr = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', curr);
+      localStorage.setItem('theme', curr);
+    });
+  </script>
+</body>
+</html>
