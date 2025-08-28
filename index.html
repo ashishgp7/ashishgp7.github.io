@@ -259,12 +259,15 @@
           <p>LinkedIn: <a href="https://www.linkedin.com/in/ashish-gunjal-a434bb249" target="_blank" rel="noopener">linkedin.com/in/ashish-gunjal-a434bb249</a></p>
         </div>
         <div class="card">
-          <form onsubmit="event.preventDefault(); alert('Thanks! I\'ll get back to you soon.');">
+          <form action="https://formspree.io/f/xrbaegzy" method="POST">
             <div class="grid" style="grid-template-columns:1fr 1fr; gap:10px;">
-              <input required placeholder="Your name" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);">
-              <input type="email" required placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);">
+              <input name="name" required placeholder="Your name" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);">
+              <input type="email" name="email" required placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);">
             </div>
-            <textarea required placeholder="Message" rows="4" style="margin-top:10px;width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);"></textarea>
+            <textarea name="message" required placeholder="Message" rows="4" style="margin-top:10px;width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);"></textarea>
+            <input type="hidden" name="_subject" value="New message from ashishgp7.github.io">
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_redirect" value="https://ashishgp7.github.io/thank-you.html">
             <button class="btn" type="submit" style="margin-top:10px">Send message</button>
           </form>
         </div>
